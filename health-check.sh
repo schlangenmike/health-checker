@@ -21,13 +21,29 @@ fi
 # Check memory
 echo "" | tee -a $LOG_FILE
 echo "Checking memory..." | tee -a $LOG_FILE
-vm_stat | head -5 | tee -a $LOG_FILE
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # macOS
+    vm_stat | head -5 | tee -a $LOG_FILE
+else
+    # Linux
+    free -h | tee -a $LOG_FILE
+fi
+
 echo "✅ Memory check complete" | tee -a $LOG_FILE
 
 # Check CPU usage
 echo "" | tee -a $LOG_FILE
 echo "Checking CPU usage..." | tee -a $LOG_FILE
-top -l 1 | grep "CPU usage" | tee -a $LOG_FILE
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # macOS
+    top -l 1 | grep "CPU usage" | tee -a $LOG_FILE
+else
+    # Linux
+    top -bn1 | grep "Cpu(s)" | tee -a $LOG_FILE
+fi
+
 echo "✅ CPU check complete" | tee -a $LOG_FILE
 
 # Check common dev ports
