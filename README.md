@@ -26,6 +26,5 @@ Results are displayed in terminal and saved to `health-check.log`.
 ```bash
 git clone https://github.com/yourusername/health-checker.git
 cd health-checker
-chmod +x health-check.sh
 ./health-check.sh
 ```
