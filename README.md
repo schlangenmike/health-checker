@@ -6,9 +6,9 @@ A simple bash script to monitor local machine health.
 
 - Disk space usage
 - Memory statistics
--CPU usage
+- CPU usage
 - Active services on common development ports (3000, 5432, 8080, 8000)
--Network connectivity (internet connection)
+- Network connectivity (internet connection)
 
 ## Usage
 ```bash
