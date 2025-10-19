@@ -17,6 +17,24 @@ A simple bash script to monitor local machine health.
 
 Results are displayed in terminal and saved to `health-check.log`.
 
+## Docker Usage
+
+Run without installing:
+```bash
+docker run schlangenmike/health-checker
+```
+
+Or build locally:
+```bash
+docker build -t health-checker .
+docker run health-checker
+```
+
+Pull from Docker Hub:
+```bash
+docker pull schlangenmike/health-checker
+```
+
 ## Requirements
 
 - macOS or Linux
