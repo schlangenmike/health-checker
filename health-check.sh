@@ -42,6 +42,15 @@ for port in 3000 5432 8080 8000; do
     fi
 done
 
+# Check network connectivity
+echo "" | tee -a $LOG_FILE
+echo "Checking network connectivity..." | tee -a $LOG_FILE
+if ping -c 1 google.com > /dev/null 2>&1; then
+    echo "✅ Internet connection: ACTIVE" | tee -a $LOG_FILE
+else
+    echo "❌ Internet connection: FAILED" | tee -a $LOG_FILE
+fi
+
 echo "" | tee -a $LOG_FILE
 echo "---" | tee -a $LOG_FILE
 echo "" | tee -a $LOG_FILE
