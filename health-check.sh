@@ -24,6 +24,12 @@ echo "Checking memory..." | tee -a $LOG_FILE
 vm_stat | head -5 | tee -a $LOG_FILE
 echo "✅ Memory check complete" | tee -a $LOG_FILE
 
+# Check CPU usage
+echo "" | tee -a $LOG_FILE
+echo "Checking CPU usage..." | tee -a $LOG_FILE
+top -l 1 | grep "CPU usage" | tee -a $LOG_FILE
+echo "✅ CPU check complete" | tee -a $LOG_FILE
+
 # Check common dev ports
 echo "" | tee -a $LOG_FILE
 echo "Checking common ports..." | tee -a $LOG_FILE
