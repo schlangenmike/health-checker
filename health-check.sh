@@ -1,11 +1,16 @@
 #!/bin/bash
 
+VERSION="1.0.0"
+
 # health-check.sh - Simple local machine health monitor
 
-LOG_FILE="health-check.log"
+TIMESTAMP=$(date '+%Y-%m-%d-%H%M%S')
+LOG_FILE="health-check-$TIMESTAMP.log"
 DATE=$(date '+%Y-%m-%d %H:%M:%S')
 
 echo "=== Health Check - $DATE ===" | tee -a $LOG_FILE
+echo "Version: $VERSION" | tee -a $LOG_FILE
+echo "" | tee -a $LOG_FILE
 
 # Check disk space
 echo "Checking disk space..." | tee -a $LOG_FILE
