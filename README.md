@@ -1,6 +1,6 @@
 # Health Checker
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Version](https://img.shields.io/badge/version-1.1.0-blue)
 
 A simple bash script to monitor local machine health.
 
@@ -11,6 +11,7 @@ A simple bash script to monitor local machine health.
 - CPU usage
 - Active services on common development ports (3000, 5432, 8080, 8000)
 - Network connectivity (internet connection)
+- System uptime
 
 ## Usage
 ```bash
@@ -21,9 +22,11 @@ Results are displayed in terminal and saved to `health-check-TIMESTAMP.log`.
 
 ## Version
 
-Current version: **1.0.0**
+Current version: **1.1.0**
 
 ### Changelog
+- v1.1.0 (2025-10-20)
+  - Added system uptime monitoring
 - v1.0.0 (2025-10-19)
   - First versioned release
   - Cross-platform support (macOS and Linux)
