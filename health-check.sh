@@ -72,6 +72,12 @@ else
     echo "❌ Internet connection: FAILED" | tee -a $LOG_FILE
 fi
 
+# Check system uptime
+echo "" | tee -a $LOG_FILE
+echo "Checking system uptime..." | tee -a $LOG_FILE
+uptime | tee -a $LOG_FILE
+echo "✅ Uptime check complete" | tee -a $LOG_FILE
+
 echo "" | tee -a $LOG_FILE
 echo "---" | tee -a $LOG_FILE
 echo "" | tee -a $LOG_FILE
