@@ -1,6 +1,6 @@
 # Health Checker
 
-![Version](https://img.shields.io/badge/version-1.1.0-blue)
+![Version](https://img.shields.io/badge/version-1.1.2-blue)
 
 A simple bash script to monitor local machine health.
 
@@ -22,9 +22,11 @@ Results are displayed in terminal and saved to `health-check-TIMESTAMP.log`.
 
 ## Version
 
-Current version: **1.1.0**
+Current version: **1.1.2**
 
 ### Changelog
+-v1.1.2 (2025-10-21)
+  - Added multi-platform Docker support (ARM64 + x86)
 - v1.1.0 (2025-10-20)
   - Added system uptime monitoring
 - v1.0.0 (2025-10-19)
@@ -37,6 +39,8 @@ Current version: **1.1.0**
   - Docker support
 
 ## Docker Usage
+
+Supports multiple platforms (ARM64/Apple Silicon and x86/Intel).
 
 Run without installing:
 ```bash
