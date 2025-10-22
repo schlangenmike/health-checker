@@ -58,6 +58,18 @@ Pull from Docker Hub:
 docker pull schlangenmike/health-checker
 ```
 
+## Kubernetes Deployment
+
+Deploy as a CronJob (runs every 5 minutes):
+```bash
+kubectl apply -f k8s/health-checker-deployment.yaml
+```
+
+View logs:
+```bash
+kubectl logs -l job-name=health-checker
+```
+
 ## Requirements
 
 - macOS or Linux
