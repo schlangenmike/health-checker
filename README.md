@@ -25,7 +25,7 @@ Results are displayed in terminal and saved to `health-check-TIMESTAMP.log`.
 Current version: **1.1.2**
 
 ### Changelog
--v1.1.2 (2025-10-21)
+- v1.1.2 (2025-10-21)
   - Added multi-platform Docker support (ARM64 + x86)
 - v1.1.0 (2025-10-20)
   - Added system uptime monitoring
